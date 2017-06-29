@@ -33,7 +33,7 @@ public class Main {
                 porch = number/36;
             } else {
                 porch = number / 36 + 1;
-                double n = (double) (number - (porch - 1) * 36) / 4;
+                double n = (double) (number%(36*(porch-1))) / 4;
                 floor = (int) Math.ceil(n);
             }
             System.out.println("Porch: " + porch + "\nFloor: " + floor);
